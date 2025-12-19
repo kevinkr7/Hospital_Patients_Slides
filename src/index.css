@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Medical presentation color palette */
+    --background: 230 100% 97%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 20% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.75rem;
+    
+    /* Custom design tokens for presentation */
+    --slide-background: 0 0% 100%;
+    --slide-shadow: 210 20% 90%;
+    --gradient-bg: linear-gradient(135deg, hsl(230, 100%, 97%) 0%, hsl(166, 100%, 97%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 50%) 0%, hsl(142, 71%, 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(230, 100%, 90%) 0%, hsl(166, 100%, 90%) 100%);
+    
+    /* Animation tokens */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slide: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* Typography tokens */
+    --font-headline: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 217 33% 17%;
+    --foreground: 210 40% 95%;
+    
+    --card: 217 33% 17%;
+    --card-foreground: 210 40% 95%;
+    
+    --slide-background: 217 33% 19%;
+    --slide-shadow: 210 20% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border box-border;
+  }
+
+  html {
+    font-family: var(--font-body);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--gradient-bg);
+    color: hsl(var(--foreground));
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Slideshow specific styles */
+  .slide-card {
+    @apply bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20;
+    box-shadow: 0 25px 50px -12px hsl(var(--slide-shadow) / 0.25);
+  }
+  
+  .slide-image {
+    @apply object-cover w-full rounded-lg transition-transform duration-300;
+    height: clamp(220px, 8vw + 200px, 420px);
+  }
+  
+  .slide-image:hover {
+    @apply scale-105 -translate-y-1;
+    box-shadow: 0 20px 40px -12px hsl(var(--slide-shadow) / 0.4);
+  }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .presenter-badge {
+    @apply bg-gradient-to-r from-primary to-accent text-white px-3 py-1 rounded-full text-sm font-medium;
+    box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+  }
+}
+
+@layer utilities {
+  .animate-slide-in {
+    animation: slide-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .animate-stagger {
+    animation: fade-in-up 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}

@@ -1,73 +1,110 @@
-# Welcome to your Lovable project
+# 🏥 Hospital Patients Wearable Devices – Educational Slideshow
 
-## Project info
+An **educational web-based slideshow application** that introduces and explains the role of **wearable devices in hospital settings**.  
+This project is designed for **learning, presentations, and academic demonstrations**, focusing on how wearables improve patient monitoring, safety, and healthcare outcomes.
 
-**URL**: https://lovable.dev/projects/df5b515d-58dc-4662-a0dd-761253080d4d
+---
 
-## How can I edit this code?
+## 📚 About the Project
 
-There are several ways of editing your application.
+This website presents a **9-slide interactive slideshow** covering the fundamentals and advanced concepts of **hospital wearable device applications**.
 
-**Use Lovable**
+The content is structured to be **clear, visual, and informative**, making it suitable for:
+- Students
+- Educators
+- Healthcare technology discussions
+- Academic presentations
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/df5b515d-58dc-4662-a0dd-761253080d4d) and start prompting.
+> ⚠️ **Disclaimer**:  
+> This project is created **strictly for educational purposes** and does **not** provide medical advice or clinical recommendations.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🖥️ Slide Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The slideshow contains the following **9 slides**:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Title & Introduction**  
+   Overview of wearable devices in modern healthcare
 
-Follow these steps:
+2. **Why Wearables in Hospitals?**  
+   Benefits such as continuous monitoring, efficiency, and patient safety
+
+3. **Common Hospital Wearables**  
+   Examples: smart bands, ECG patches, pulse oximeters, smart garments
+
+4. **Real-time Vitals & Telemetry**  
+   Continuous tracking of heart rate, oxygen levels, and vital signs
+
+5. **Mobility, Rehab & Gait Monitoring**  
+   Supporting recovery, physical therapy, and movement analysis
+
+6. **Fall Detection & Patient Safety**  
+   Automated alerts and prevention of hospital fall incidents
+
+7. **Chronic Disease Management**  
+   Long-term monitoring for conditions like diabetes and cardiac diseases
+
+8. **Data, AI & Privacy**  
+   Role of AI, data analytics, and patient data protection
+
+9. **Implementation Roadmap**  
+   Practical steps for adopting wearable technology in hospitals
+
+---
+
+## 🛠️ Technologies Used
+
+This project is built using modern web technologies:
+
+- ⚡ **Vite**
+- ⚛️ **React**
+- 🟦 **TypeScript**
+- 🎨 **Tailwind CSS**
+- 🧩 **shadcn/ui**
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+### Prerequisites
+Make sure you have:
+- **Node.js** (v18+ recommended)
+- **npm**
+
+You can install Node.js using **nvm**:  
+https://github.com/nvm-sh/nvm#installing-and-updating
+
+---
+
+### Installation & Run
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Navigate into the project folder
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 💙 Final Note
 
-**Use GitHub Codespaces**
+Thank you for checking out this project!
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+This website was created with the goal of **learning, exploring, and understanding** how wearable devices are transforming patient care inside hospitals. If this project helps you grasp even one new concept, then it has done its job.
 
-## What technologies are used for this project?
+Feel free to:
+- Explore the slides
+- Fork the repository
+- Improve the content
+- Use it for educational presentations
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/df5b515d-58dc-4662-a0dd-761253080d4d) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Learning and innovation grow when knowledge is shared.  
+Happy learning and happy coding! 🚀
